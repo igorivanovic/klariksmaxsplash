@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ocean Pollution Awareness</title>
   <style>
+    @font-face {
+    url('fonts/Pacifico-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
     body {
       font-family: 'Pacifico', cursive;
       font-size: larger;
@@ -96,7 +102,10 @@
         gubitkom biodiverziteta, njihova zaštita postaje veoma važna.</p>
       <div class="hidden-content" id="content1">
         <hr/>
-        <p>Suočeni sa zagađenjem, klimatskim promjenama i gubitkom biodiverziteta, njihova zaštita postaje veoma važna. Ovde možete naći još dodatnih informacija o okeanima i njihovom značaju.</p>
+        <p>Našim projektom želimo pokazati
+          jednostavno rješenje koristeći inovativne
+          tehnologije poput kamera i senzora za
+          istraživanje, i smanjenje negativnog uticaja.</p>
       </div>
       <button class="button toggle-button" data-target="content1">Detaljnije</button>
     </div>
@@ -112,20 +121,29 @@
     <div class="text-box">
       <h2>Ecology - We Can Protect The Oceans</h2>
       <p>Our oceans are facing threats from pollution and habitat destruction. We must act now.</p>
-      <a href="#" class="button">Read More</a>
+      <div class="hidden-content" id="content1">
+        <hr/>
+        <p>Ovo je test</p>
+      </div>
+      <button class="button toggle-button" data-target="content1">Detaljnije</button>
     </div>
   </div>
 
   <div class="center-text">
     <h2>10 Things You Can Do to Save the Ocean</h2>
     <p>Take action today and make a difference.</p>
-    <a href="#" class="button">Read More</a>
+    <div class="hidden-content" id="content1">
+      <hr/>
+      <p>Content here!</p>
+    </div>
+    <button class="button toggle-button" data-target="content1">Detaljnije</button>
   </div>
 
   <div class="section">
     <div class="text-box">
       <h2>Make Safe, Sustainable Seafood Choices</h2>
       <p>Help reduce the demand for overexploited species by choosing sustainable seafood.</p>
+
     </div>
     <div class="image-box">
       <img src="img/happy_fish.webp" alt="Tropical fish in ocean">
@@ -143,7 +161,7 @@
 
         content.classList.toggle('active');
         this.classList.toggle('active');
-        this.textContent = content.classList.contains('active') ? 'Zatvori' : 'Read More';
+        this.textContent = content.classList.contains('active') ? 'Zatvori' : 'Detaljnije';
       });
     });
   });
