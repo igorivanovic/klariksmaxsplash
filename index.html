@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Pollution Awareness</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 40px 0;
+      align-items: center;
+    }
+    .text-box {
+      flex: 1;
+      padding: 20px;
+      background: yellow;
+    }
+    .image-box {
+      flex: 1;
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 15px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .button:hover {
+      background: darkgray;
+    }
+    .center-text {
+      text-align: center;
+      padding: 20px;
+      background: yellow;
+      margin: 20px auto;
+      width: 50%;
+    }
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="section">
+    <div class="text-box">
+      <h2>Cleaning up Ocean Pollution</h2>
+      <p>It is critical that we join together to fight ocean trash. There are multiple agencies, nonprofits, and corporations working on this.</p>
+      <a href="#" class="button">Read More</a>
+    </div>
+    <div class="image-box">
+      <img src="img/happyturtle.webp" alt="Turtle with plastic">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="image-box">
+      <img src="img/turtle_in_trash.webp" alt="Pollution in ocean">
+    </div>
+    <div class="text-box">
+      <h2>Ecology - We Can Protect The Oceans</h2>
+      <p>Our oceans are facing threats from pollution and habitat destruction. We must act now.</p>
+      <a href="#" class="button">Read More</a>
+    </div>
+  </div>
+
+  <div class="center-text">
+    <h2>10 Things You Can Do to Save the Ocean</h2>
+    <p>Take action today and make a difference.</p>
+    <a href="#" class="button">Read More</a>
+  </div>
+
+  <div class="section">
+    <div class="text-box">
+      <h2>Make Safe, Sustainable Seafood Choices</h2>
+      <p>Help reduce the demand for overexploited species by choosing sustainable seafood.</p>
+    </div>
+    <div class="image-box">
+      <img src="img/happy_fish.webp" alt="Tropical fish in ocean">
+    </div>
+  </div>
+</div>
+</body>
+</html>
