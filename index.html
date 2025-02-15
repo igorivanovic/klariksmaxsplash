@@ -6,7 +6,8 @@
   <title>Ocean Pollution Awareness</title>
   <style>
     body {
-      font-family: 'Pacifico', cursive;;
+      font-family: 'Pacifico', cursive;
+      font-size: larger;
       margin: 0;
       padding: 0;
       background-color: white;
@@ -29,25 +30,44 @@
       padding: 20px;
       background: #e6f3ff;
       border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .image-box {
       flex: 1;
       padding: 20px;
+
     }
     img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .button {
+      font-family: 'Pacifico', cursive;
+      font-size: larger;
       display: inline-block;
       padding: 10px 15px;
       background: black;
       color: white;
       text-decoration: none;
       margin-top: 10px;
+      border-radius: 20px;
     }
     .button:hover {
+      background: darkgray;
+    }
+    .hidden-content {
+      display: none;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .hidden-content.active {
+      display: block;
+    }
+
+    .toggle-button.active {
       background: darkgray;
     }
     .center-text {
@@ -74,7 +94,11 @@
         najmanje istraženim djelovima naše planete. Oni su ključni za ekosistem i
         dom su mnogih još neotkrivenih vrsta. Suočeni sa zagađenjem, klimatskim promjenama i
         gubitkom biodiverziteta, njihova zaštita postaje veoma važna.</p>
-      <a href="#" class="button">Read More</a>
+      <div class="hidden-content" id="content1">
+        <hr/>
+        <p>Suočeni sa zagađenjem, klimatskim promjenama i gubitkom biodiverziteta, njihova zaštita postaje veoma važna. Ovde možete naći još dodatnih informacija o okeanima i njihovom značaju.</p>
+      </div>
+      <button class="button toggle-button" data-target="content1">Detaljnije</button>
     </div>
     <div class="image-box">
       <img src="img/ocean.webp" alt="Turtle with plastic">
@@ -108,5 +132,21 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.toggle-button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const content = document.getElementById(targetId);
+
+        content.classList.toggle('active');
+        this.classList.toggle('active');
+        this.textContent = content.classList.contains('active') ? 'Zatvori' : 'Read More';
+      });
+    });
+  });
+</script>
 </body>
 </html>
